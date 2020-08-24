@@ -1,3 +1,23 @@
+/*
+Colors:
+Background & Vela Alt Text (Yellowish-White): #FFFDF9;
+Text & Accents (Dark Gray): #262626;
+Unselected & Alt Accent (Light Gray): #A0A0A0;
+Vela Accent (Dark Blue): #24313D;
+Vela Alt Header 1 (Grayish-Blue): #758598;
+Vela Alt Header 2 (Dark Grayish-Blue): #586B7C;
+Vela Alt Background (Light Gray): #EFEFEF;
+
+Fonts:
+font-family: 'EB Garamond', serif;
+font-family: 'Signika Negative', sans-serif;
+*/
+
 body {
 	background-color: #FFFDF9;
+	font-family: 'EB Garamond', serif;
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 1.6;
+	color: #262626;
 }
