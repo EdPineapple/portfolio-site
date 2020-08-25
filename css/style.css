@@ -9,8 +9,8 @@ Vela Alt Header 2 (Dark Grayish-Blue): #586B7C;
 Vela Alt Background (Light Gray): #EFEFEF;
 
 Fonts:
-font-family: 'EB Garamond', serif;
-font-family: 'Signika Negative', sans-serif;
+font-family: 'EB Garamond', serif; (400(i), 700(i))
+font-family: 'Signika Negative', sans-serif; (700)
 */
 
 body {
@@ -74,4 +74,30 @@ a:visited { /* visited link */
 }
 a:active { /* selected link */
   color: #586B7C;
+}
+
+.button {
+  display: inline-block;
+  border:none;
+  background-color: #262626;
+  color: #FFFDF9;
+  font-family: 'Signika Negative', sans-serif;
+  font-weight: 700;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  margin: 2px 2px;
+  border-radius: 50px;
+  transition: 0.2s opacity;
+}
+
+.button:hover, active {
+  opacity: 0.8; /* Reduces the opacity of the button to 80% */
+  color: #FFFDF9;
+  text-decoration: none;
+}
+
+.button:visited {
+   color: #FFFDF9;
+   text-decoration: none;
 }
