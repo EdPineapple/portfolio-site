@@ -58,6 +58,10 @@ img {
 	*/
 }
 
+.profile {
+	width: 30%;
+}
+
 a {
   color: #24313D;
   text-decoration: none; /* No underlining */
