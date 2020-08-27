@@ -123,6 +123,7 @@ a:active { /* selected link */
 
 
 #hero {
+
 }
 
 #hero h1 {
@@ -137,4 +138,35 @@ a:active { /* selected link */
 	font-weight: 400;
 	line-height: 1.6;
 	margin-top: 0px;
+}
+
+nav {
+	font-family: 'Signika Negative', sans-serif;
+  	font-weight: 700;
+	color: #262626;
+}
+
+nav > ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+nav > ul > li {
+	display: inline-block;
+}
+
+nav > ul > li > a, a:visited {
+	padding: 0 15px;
+	text-transform: uppercase;
+	font-weight: 700;
+	color: #a0a0a0;
+}
+
+nav > ul > li > a:hover, a:focus, a:active {
+	color: #262626;
+	text-decoration: none;
+}
+
+a.active {
+	color: #262626;
 }
