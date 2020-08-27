@@ -13,6 +13,10 @@ font-family: 'EB Garamond', serif; (400(i), 700(i))
 font-family: 'Signika Negative', sans-serif; (700)
 */
 
+* {
+	box-sizing: border-box;
+}
+
 body {
 	background-color: #FFFDF9;
 	font-family: 'EB Garamond', serif;
@@ -104,4 +108,33 @@ a:active { /* selected link */
 .button:visited {
    color: #FFFDF9;
    text-decoration: none;
+}
+
+#logo {
+	width: 5%;
+	margin-top: 15px;
+}
+
+/* Layout Styling */
+
+.container {
+	padding: 0 15px;
+}
+
+
+#hero {
+}
+
+#hero h1 {
+	text-align: left;
+	font-size: 80px;
+	margin-bottom: 0px;
+}
+
+#hero p {
+	font-family: 'EB Garamond', serif;
+	font-size: 26px;
+	font-weight: 400;
+	line-height: 1.6;
+	margin-top: 0px;
 }
