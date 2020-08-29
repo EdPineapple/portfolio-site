@@ -37,12 +37,12 @@ h1 {
 }
 
 h2 {
-  font-size: 2.25em;
+  font-size: 1.80em;
   font-weight: 700;
 }
 
 h3 {
-  font-size: 1.75em;
+  font-size: 1.60em;
   font-weight: 400;
 }
 h4 {
@@ -101,7 +101,6 @@ a:active { /* selected link */
 
 .button:hover, active {
   opacity: 0.8; /* Reduces the opacity of the button to 80% */
-  color: #FFFDF9;
   text-decoration: none;
 }
 
@@ -113,6 +112,11 @@ a:active { /* selected link */
 #logo {
 	width: 5%;
 	margin-top: 15px;
+}
+
+#logo:hover {
+	transition: 0.2s opacity;
+	opacity: 0.8;
 }
 
 /* Layout Styling */
@@ -179,4 +183,59 @@ nav > ul > li > a:hover, a:focus, a:active {
 
 a.active {
 	color: #262626;
+}
+
+/*
+
+Social Media Icons:
+
+- Flex + justify-content (center) to automatically center all elements
+- Margins around the links to add space between them
+
+*/
+
+.social {
+	display: flex;
+	justify-content: center;
+}
+
+.social > a {
+	margin: 10px;
+}
+
+/* 
+
+...
+
+*/
+
+.message {
+	display: flex;
+	justify-content: center;
+	margin: 10px;
+}
+
+.chat {
+	font-family: 'EB Garamond', serif;
+	font-size: 28px;
+	font-weight: 700;
+	text-align: center;
+	margin: 15px;
+}
+
+.copyright {
+	font-size: 16px;
+	margin: 0px 15px 15px 15px; /* Top, Right, Bottom, Left */
+}
+
+.bar {
+	background-color: #262626;
+	height: 60px;
+	width: 100%;
+	margin: 100px 0px 15px 0px;
+}
+
+.iconhover:hover {
+	transition: 0.2s opacity;
+	opacity: 0.8;
 }
