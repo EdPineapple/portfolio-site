@@ -1,17 +1,31 @@
-/*
-Colors:
-Background & Vela Alt Text (Yellowish-White): #FFFDF9;
-Text & Accents (Dark Gray): #262626;
-Unselected & Alt Accent (Light Gray): #A0A0A0;
-Vela Accent (Dark Blue): #24313D;
-Vela Alt Header 1 (Grayish-Blue): #758598;
-Vela Alt Header 2 (Dark Grayish-Blue): #586B7C;
-Vela Alt Background (Light Gray): #EFEFEF;
+/* --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-Fonts:
-font-family: 'EB Garamond', serif; (400(i), 700(i))
-font-family: 'Signika Negative', sans-serif; (700)
-*/
+[COLORS]
+
+- Background & Vela Alt Text (Yellowish-White): #FFFDF9;
+- Text & Accents (Dark Gray): #262626;
+- Unselected & Alt Accent (Light Gray): #A0A0A0;
+- Vela Accent (Dark Blue): #24313D;
+- Vela Alt Header 1 (Grayish-Blue): #758598;
+- Vela Alt Header 2 (Dark Grayish-Blue): #586B7C;
+- Vela Alt Background (Light Gray): #EFEFEF;
+
+[FONTS]
+
+- font-family: 'EB Garamond', serif; (400(i), 700(i))
+- font-family: 'Signika Negative', sans-serif; (700)
+
+***
+
+[GENERAL STYLING]
+
+- box-sizing: border-box; Includes padding and border into all elements' width and height
+- Asterisk selects all HTML elements
+- Set basic rules for fonts across all pages
+- "em" Specifies a length relative to the current font-size of the element; more responsive
+- Container to set default padding on most elements
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 
 * {
 	box-sizing: border-box;
@@ -50,39 +64,61 @@ h4 {
   font-weight: 400;
 }
 
+.container {
+	padding: 0 15px;
+}
+
+/* --------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+[IMAGE STYLING]
+
+- max-width: 100%; Images cannot scale up larger than their original size
+- Reduced size of Profile Image on About Page
+- Certain images span the entire width of the page
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
 img {
 	max-width: 100%;
 	height: auto;
-
-	/*
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-	width: 70%;
-	*/
 }
 
 .profile {
 	width: 30%;
 }
 
+.fullimage {
+	width: 100%;
+	padding: 0px;
+}
+
+/* --------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+[LINK STYLING]
+
+- Changed color of in-text links and removed default underline
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
 a {
   color: #24313D;
-  text-decoration: none; /* No underlining */
+  text-decoration: none;
 }
 
-a:hover,
-a:focus {
+a:hover, a:focus {
   color: #758598;
-  text-decoration: underline; /* Underlining when hovering over a link */
+  text-decoration: underline;
 }
 
-a:visited { /* visited link */
+a:visited, a:active {
   color: #586B7C;
 }
-a:active { /* selected link */
-  color: #586B7C;
-}
+
+/* --------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+[BUTTON STYLING]
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 
 .button {
   display: inline-block;
@@ -100,7 +136,7 @@ a:active { /* selected link */
 }
 
 .button:hover, active {
-  opacity: 0.8; /* Reduces the opacity of the button to 80% */
+  opacity: 0.8;
   text-decoration: none;
 }
 
@@ -108,6 +144,12 @@ a:active { /* selected link */
    color: #FFFDF9;
    text-decoration: none;
 }
+
+/* --------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+[LOGO STYLING]
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 
 #logo {
 	width: 5%;
@@ -119,12 +161,11 @@ a:active { /* selected link */
 	opacity: 0.8;
 }
 
-/* Layout Styling */
+/* --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-.container {
-	padding: 0 15px;
-}
+[HERO STYLING]
 
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 
 #hero {
 	padding: 20px 0;
@@ -144,6 +185,15 @@ a:active { /* selected link */
 	line-height: 1.6;
 	margin-top: 0px;
 }
+
+/* --------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+[HEADER & NAVIGATION BAR STYLING]
+
+- Puts all list elements on one line with logo
+- Changes colors for vela.html
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 
 .header {
 	display: inline;
@@ -185,34 +235,30 @@ a.active {
 	color: #262626;
 }
 
-/*
+.velaheader {
+	background-color: #24313D;
+}
+
+.velaheader nav > ul > li > a:hover, a:focus, a:active {
+	color: #89E3FF;
+	text-decoration: none;
+}
+
+/* --------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+[FOOTER]
 
 Social Media Icons:
-
-- Flex + justify-content (center) to automatically center all elements
+- Flex + justify-content (center) to group and automatically center all elements
 - Margins around the links to add space between them
 
-*/
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 
-.social {
-	display: flex;
-	justify-content: center;
-}
-
-.social > a {
-	margin: 10px;
-}
-
-/* 
-
-...
-
-*/
-
-.message {
-	display: flex;
-	justify-content: center;
-	margin: 10px;
+.bar {
+	background-color: #262626;
+	height: 60px;
+	width: 100%;
+	margin: 100px 0px 15px 0px;
 }
 
 .chat {
@@ -223,19 +269,27 @@ Social Media Icons:
 	margin: 15px;
 }
 
-.copyright {
-	font-size: 16px;
-	margin: 0px 15px 15px 15px; /* Top, Right, Bottom, Left */
+.message {
+	display: flex;
+	justify-content: center;
+	margin: 10px;
 }
 
-.bar {
-	background-color: #262626;
-	height: 60px;
-	width: 100%;
-	margin: 100px 0px 15px 0px;
+.social {
+	display: flex;
+	justify-content: center;
+}
+
+.social > a {
+	margin: 10px;
 }
 
 .iconhover:hover {
 	transition: 0.2s opacity;
 	opacity: 0.8;
+}
+
+.copyright {
+	font-size: 16px;
+	margin: 0px 15px 15px 15px; /* Top, Right, Bottom, Left */
 }
