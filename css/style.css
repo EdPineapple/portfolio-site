@@ -171,22 +171,49 @@ a:visited, a:active {
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 
 #hero {
-	padding: 20px 0;
+	display: block;
+	width: 80%;
+	margin: 250px auto;
 }
 
 #hero h1 {
 	text-align: left;
-	font-size: 70px;
+	font-size: 80px;
 	margin-bottom: 0px;
 	margin: 0;
 }
 
 #hero p {
 	font-family: 'EB Garamond', serif;
+	font-size: 22px;
+	font-weight: 400;
+	line-height: 1.6;
+	margin-top: 0px;
+}
+
+@media only screen and (min-width: 1024px) {
+
+	#hero {
+	display: block;
+	width: 60%;
+	margin: 250px auto;
+	}
+
+	#hero h1 {
+	text-align: left;
+	font-size: 110px;
+	margin-bottom: 0px;
+	margin: 0;
+	}
+
+	#hero p {
+	font-family: 'EB Garamond', serif;
 	font-size: 26px;
 	font-weight: 400;
 	line-height: 1.6;
 	margin-top: 0px;
+}
+
 }
 
 /* --------------------------------------------------------------------------------------------------------------------------------------------------------------------
