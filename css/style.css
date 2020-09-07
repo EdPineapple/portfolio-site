@@ -309,48 +309,99 @@ Social Media Icons:
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 
-@media (min-width: 56.25em) {
+@media only screen and (max-width: 768px) {
+
+	.layout-overview {
+		display: block;
+		width: 70%;
+		margin: 100px auto;
+	}
+
+	.accent-overview {
+		background-color: #24313D;
+		height: auto;
+		color: #FFFDF9;
+		padding: 15px;
+	}
+
+	.role > h4 {
+		font-family: 'EB Garamond', serif;
+		font-weight: 700;
+		font-size: 22px;
+		line-height: 0;
+	}
+
+	.date {
+		font-family: 'EB Garamond', serif;
+		font-weight: 400;
+		font-style: italic;
+		font-size: 18px;
+	}
+
+	.process {
+		display: block;
+		width: 70%;
+		margin: 0px auto 120px auto;
+	}
+
+}
+
+@media only screen and (min-width: 768px) {
 	.project {
 			display: flex;
 			width: 60%;
 			margin: 100px auto 0px auto;
 	}
+
+	.overview {
+		flex: 2;
+		padding-right: 80px;
+	}
+
+	.role {
+		flex: 0 0 250px;
+	}
+
+	.role > h4 {
+		font-family: 'EB Garamond', serif;
+		font-weight: 700;
+		font-size: 22px;
+		line-height: 0;
+	}
+
+	.date {
+		font-family: 'EB Garamond', serif;
+		font-weight: 400;
+		font-style: italic;
+		font-size: 18px;
+	}
+
+	.process {
+		display: block;
+		width: 60%;
+		margin: 0px auto 120px auto;
+	}
+
+	.accent-overview {
+		background-color: #24313D;
+		height: auto;
+		color: #FFFDF9;
+		padding: 5px 0px;
+	}
+
 }
 
-.overview {
-	flex: 2;
-	padding-right: 80px;
-}
 
-.role {
-	flex: 0 0 250px;
-}
-
-.role > h4 {
-	font-family: 'EB Garamond', serif;
-	font-weight: 700;
-	font-size: 22px;
-	line-height: 0;
-}
-
-.date {
-	font-family: 'EB Garamond', serif;
-	font-weight: 400;
-	font-style: italic;
-	font-size: 18px;
-}
-
-.process {
-	display: block;
-	width: 60%;
-	margin: 0px auto 120px auto;
-}
 
 /* --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-[PROJECT-BODY STYLING] (UNFINISHED)
+[PROJECT-BODY STYLING] (EXPERIMENTAL)
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+/*
+
+@media (min-width: 1700px) {
 
 .layout {
 	display: flex;
@@ -358,11 +409,24 @@ Social Media Icons:
 	margin: 120px auto 80px auto;
 }
 
+.layout-accent {
+	display: flex;
+	width: 70%;
+	margin: 0px auto 80px auto;
+}
+
+.layout-full {
+	display: flex;
+	width: 100%;
+	margin: 120px auto 80px auto;
+}
+
 .layout-clusters {
 	display: flex;
-	width: 95%;
+	width: 100%;
 	margin: 100px auto;
 	background-color: #24313D;
+	height: 21em;
 	color: #FFFDF9;
 }
 
@@ -378,13 +442,68 @@ Social Media Icons:
 
 .layout-body {
 	flex: 0.65;
-	/* padding-right: 50px; */
+	padding: auto 20px;
 }
 
 .accent {
 	background-color: #24313D;
 	height: 8em;
-	/* width: 100%; Messes with the width of the flexbox and is not centered around the flexbox*/
 	color: #FFFDF9;
 }
 
+.accent-top {
+	background-color: #24313D;
+	height: 3em;
+	margin: 0;
+}
+
+}
+
+*/
+
+/* --------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+[PROJECT-BODY STYLING]
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+.vela-bg-gray {
+	background-color: #EFEFEF;
+	height: auto;
+	padding: 20px 0px 60px 0px;
+	margin: 80px 0px 80px 0px;
+}
+
+.accent {
+	background-color: #24313D;
+}
+
+.layout {
+	display: block;
+	width: 70%;
+	margin: 80px auto;
+}
+
+@media only screen and (min-width: 768px) {
+	.layout {
+	display: block;
+	width: 60%;
+	margin: 80px auto;
+	}
+}
+
+@media only screen and (min-width: 1024px) {
+	.layout {
+	display: block;
+	width: 50%;
+	margin: 80px auto;
+	}
+}
+
+@media only screen and (min-width: 1440px) {
+	.layout {
+	display: block;
+	width: 40%;
+	margin: 80px auto;
+	}
+}
