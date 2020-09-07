@@ -331,6 +331,10 @@ Social Media Icons:
 		justify-content: space-between;
 	}
 
+	.about-bio > h1 {
+	font-size: 2.75em;
+	}
+
 	.about-image {
 		width: 20%;
 	}
