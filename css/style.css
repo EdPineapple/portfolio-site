@@ -582,3 +582,54 @@ Social Media Icons:
 	margin: 80px auto;
 	}
 }
+
+/* --------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+[SVG ANIMATION] (TO BE DELETED)
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+@keyframes color-change {
+	from {fill: #FFD039;}
+	to {fill: #FF9839;}
+}
+
+@keyframes cloud-move {
+  from {transform: translate(0,50px);}
+  to {transform: translate(200px,50px);}
+}
+
+@keyframes cloud-move-reverse {
+  from {transform: translate(446px,48px);}
+  to {transform: translate(100px, 48px);}
+}
+
+@keyframes cloud-scale {
+	from {transform: scale(0.5);}
+	to {transform: scale(1.0);}
+}
+
+.sun {
+	animation-duration: 4s;
+    animation-name: color-change;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+}
+
+.cloud-front {
+  animation-duration: 20s;
+  animation-name: cloud-move;
+  animation-name: cloud-scale;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}
+
+.cloud-back {
+  animation-duration: 20s;
+  animation-name: cloud-move-reverse;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}
