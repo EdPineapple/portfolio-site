@@ -155,8 +155,19 @@ a:visited, a:active {
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 
 #logo {
-	width: 5%;
+	width: 15%;
 	margin-top: 15px;
+	margin-left: 15px;
+}
+
+@media only screen and (min-width: 641px) {
+
+	#logo {
+		width: 5%;
+		margin-top: 15px;
+		margin-left: 15px;
+	}
+
 }
 
 #logo:hover {
@@ -245,10 +256,6 @@ nav > ul {
 	margin: 0;
 }
 
-nav > ul > li {
-	display: inline-block;
-}
-
 nav > ul > li > a, a:visited {
 	padding: 0 15px;
 	text-transform: uppercase;
@@ -272,6 +279,42 @@ a.active {
 .velaheader nav > ul > li > a:hover, a:focus, a:active {
 	color: #89E3FF;
 	text-decoration: none;
+}
+
+.navtoggle li:not(:last-child) {
+  display: none;
+}
+
+.navtoggle, .navtoggle.responsive {
+  position: relative;
+}
+
+.navtoggle li .icon {
+  position: absolute;
+  right: 15px;
+  top: 2px;
+  padding-top: 15px;
+  font-size: 40px;
+}
+
+.navtoggle.responsive li  {
+  display: block;
+}
+
+@media only screen and (min-width: 641px) {
+
+	nav > ul > li {
+	display: inline-block;
+	}
+
+	.navtoggle li:not(:last-child) {
+  	display: inline-block;
+	}
+
+	.navtoggle li:last-child {
+	  display: none;
+	}
+
 }
 
 /* --------------------------------------------------------------------------------------------------------------------------------------------------------------------
