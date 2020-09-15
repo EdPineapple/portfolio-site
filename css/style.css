@@ -150,33 +150,6 @@ a:visited, a:active {
 
 /* --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-[LOGO STYLING]
-
--------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
-
-#logo {
-	width: 15%;
-	margin-top: 15px;
-	margin-left: 15px;
-}
-
-@media only screen and (min-width: 641px) {
-
-	#logo {
-		width: 5%;
-		margin-top: 15px;
-		margin-left: 15px;
-	}
-
-}
-
-#logo:hover {
-	transition: 0.2s opacity;
-	opacity: 0.8;
-}
-
-/* --------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
 [HERO STYLING]
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
@@ -231,90 +204,180 @@ a:visited, a:active {
 
 [HEADER & NAVIGATION BAR STYLING]
 
-- Puts all list elements on one line with logo
-- Changes colors for vela.html
-
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 
-.header {
-	display: inline;
+/* ----------------- [LOGO STYLING] ------------------ */
+
+.logo {
+	width: 15%;
+	transition: 0.3s ease-in;
+	margin: 30px;
 }
+
+.logo:hover {
+	opacity: 0.8;
+	transition: 0.3s ease-in;
+}
+
+@media only screen and (min-width: 768px) {
+	.logo {
+		width: 9%;
+	}
+}
+
+@media only screen and (min-width: 1024px) {
+	.logo {
+		width: 5%;
+	}
+}
+
+/* ----------------- [GENERAL NAV STYLING] ------------------ */
 
 nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	min-height: 8vh;
+
 	font-family: 'Signika Negative', sans-serif;
   	font-weight: 700;
-	color: #262626;
-	display: inline-block;
-	width: 90%;
-	text-align: right;
-	margin-bottom: 15px;
+  	font-size: 16px;
 }
 
-nav > ul {
-	list-style-type: none;
-	padding: 0;
-	margin: 0;
+nav.vela {
+	background-color: #24313D;
 }
 
-nav > ul > li > a, a:visited {
-	padding: 0 15px;
-	text-transform: uppercase;
-	font-weight: 700;
-	color: #a0a0a0;
+/* ----------------- [NAV LINKS STYLING] ------------------ */
+
+.nav-links {
+	display: flex;
+	justify-content: space-around;
+	width: 25%;
 }
 
-nav > ul > li > a:hover, a:focus, a:active {
-	color: #262626;
+@media screen and (max-width:1440px){
+	.nav-links {
+	width: 35%;
+	}
+}
+
+@media screen and (max-width:1024px){
+	.nav-links {
+	width: 45%;
+	}
+}
+
+.nav-links li {
+	list-style: none;
+}
+
+.nav-links a {
+	color: #A0A0A0;
 	text-decoration: none;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	transition: 0.2s ease-in;
+}
+
+.nav-links.vela {
+	background-color: #24313D;
+}
+
+.nav-links.vela a {
+	color: #758598;
+}
+
+.nav-links a:hover, a:focus, a:active {
+	color: #262626;
+	transition: 0.2s ease-in;
+}
+
+.nav-links.vela a:hover, a:focus, a:active {
+	color: #89E3FF;
 }
 
 a.active {
 	color: #262626;
 }
 
-.velaheader {
-	background-color: #24313D;
+ul.nav-links {
+	padding: 0;
 }
 
-.velaheader nav > ul > li > a:hover, a:focus, a:active {
-	color: #89E3FF;
-	text-decoration: none;
+/* ----------------- [HAMBURGER MENU STYLING] ------------------ */
+
+.burger {
+	display: none;
+	cursor: pointer;
+	padding: 30px;
 }
 
-.navtoggle li:not(:last-child) {
-  display: none;
+.burger div {
+	width: 30px;
+	height: 4px;
+	background-color: #262626;
+	margin: 6px;
+	transition: all 0.3s ease;
 }
 
-.navtoggle, .navtoggle.responsive {
-  position: relative;
+.burger.vela div {
+	background-color: #89E3FF;
 }
 
-.navtoggle li .icon {
-  position: absolute;
-  right: 15px;
-  top: 2px;
-  padding-top: 15px;
-  font-size: 40px;
-}
+/* ----------------- [NAV LINKS HAMBURGER ANIMATIONS] ------------------ */
 
-.navtoggle.responsive li  {
-  display: block;
-}
-
-@media only screen and (min-width: 641px) {
-
-	nav > ul > li {
-	display: inline-block;
+@media screen and (max-width:768px){
+	
+	body {
+		overflow-x: hidden;
 	}
 
-	.navtoggle li:not(:last-child) {
-  	display: inline-block;
+	.nav-links {
+		position: absolute;
+		height: 80vh;
+		top: 20vh;
+		background-color: #FFFDF9;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 100%;
+		transform: translateX(100%);
+		transition: transform 0.2s ease-in;
 	}
 
-	.navtoggle li:last-child {
-	  display: none;
+	.burger {
+		display: block;
 	}
 
+}
+
+.nav-active {
+	transform: translateX(0%);
+}
+
+@keyframes navLinkFade {
+	from {
+		opacity: 0;
+		transform: translateX(150px);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateX(0px);
+	}
+}
+
+.toggle .line1 {
+	transform: rotate(-135deg) translate(-9px, -6px);
+}
+
+.toggle .line2 {
+	opacity: 0;
+}
+
+.toggle .line3 {
+	transform: rotate(+135deg) translate(-8px, 6px);
 }
 
 /* --------------------------------------------------------------------------------------------------------------------------------------------------------------------
