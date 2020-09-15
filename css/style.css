@@ -70,6 +70,77 @@ h4 {
 
 /* --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+[FADE-IN ANIMATIONS]
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+/* ----------------- [WORK PAGE] ------------------ */
+
+#hero h1 {
+	animation-name: fadeIn;
+	animation-duration: 0.8s;
+	animation-timing-function: ease-out;
+}
+
+#hero p {
+	animation-name: fadeIn;
+	animation-duration: 0.9s;
+	animation-timing-function: ease-out;
+}
+
+#work {
+	animation-name: fadeIn;
+	animation-duration: 1.6s;
+	animation-timing-function: ease-out;
+}
+
+/* ----------------- [ABOUT PAGE] ------------------ */
+
+.about-image {
+	animation-name: fadeIn;
+	animation-duration: 0.8s;
+	animation-timing-function: ease-out;
+}
+
+.about-bio h1 {
+	animation-name: fadeIn;
+	animation-duration: 1.4s;
+	animation-timing-function: ease-out;
+}
+
+.about-bio p {
+	animation-name: fadeIn;
+	animation-duration: 1.6s;
+	animation-timing-function: ease-out;
+}
+
+.about-skills {
+	animation-name: fadeIn;
+	animation-duration: 2.0s;
+	animation-timing-function: ease-out;
+}
+
+#about-lists {
+	animation-name: fadeIn;
+	animation-duration: 2.2s;
+	animation-timing-function: ease-out;
+}
+
+/* ----------------- [ANIMATION] ------------------ */
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+		transform: translateY(400px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0px);
+	}
+}
+
+/* --------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 [IMAGE STYLING]
 
 - max-width: 100%; Images cannot scale up larger than their original size
@@ -135,12 +206,13 @@ a:visited, a:active {
   text-decoration: none;
   margin: 2px 2px;
   border-radius: 50px;
-  transition: 0.2s opacity;
+  transition: 0.4s;
 }
 
 .button:hover, active {
   opacity: 0.8;
   text-decoration: none;
+  transition: 0.4s;
 }
 
 .button:visited {
@@ -420,8 +492,12 @@ Social Media Icons:
 	margin: 10px;
 }
 
+.iconhover {
+	transition: 0.4s;
+}
+
 .iconhover:hover {
-	transition: 0.2s opacity;
+	transition: 0.4s;
 	opacity: 0.8;
 }
 
