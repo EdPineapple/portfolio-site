@@ -29,6 +29,7 @@
 
 * {
 	box-sizing: border-box;
+	scroll-behavior: smooth;
 }
 
 body {
@@ -210,9 +211,10 @@ a:visited, a:active {
 }
 
 .button:hover, active {
-  opacity: 0.8;
-  text-decoration: none;
-  transition: 0.4s;
+	color: #FFFDF9;
+	opacity: 0.8;
+	text-decoration: none;
+	transition: 0.4s;
 }
 
 .button:visited {
@@ -466,7 +468,7 @@ Social Media Icons:
 	background-color: #262626;
 	height: 60px;
 	width: 100%;
-	margin: 100px 0px 15px 0px;
+	margin: 100px 0px 50px 0px;
 }
 
 .chat {
@@ -474,13 +476,18 @@ Social Media Icons:
 	font-size: 28px;
 	font-weight: 700;
 	text-align: center;
-	margin: 15px;
+	margin: 30px;
 }
 
 .message {
 	display: flex;
 	justify-content: center;
-	margin: 10px;
+	margin: 30px;
+}
+
+.message a {
+	color: #FFFDF9;
+	text-decoration: none;
 }
 
 .social {
@@ -489,7 +496,7 @@ Social Media Icons:
 }
 
 .social > a {
-	margin: 10px;
+	margin: 15px;
 }
 
 .iconhover {
