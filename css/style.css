@@ -124,9 +124,15 @@ h4 {
 	animation-timing-function: ease-out;
 }
 
-#about-lists {
+.about-lists {
 	animation-name: fadeIn;
 	animation-duration: 1.6s;
+	animation-timing-function: ease-out;
+}
+
+.about-cv {
+	animation-name: fadeIn;
+	animation-duration: 1.8s;
 	animation-timing-function: ease-out;
 }
 
@@ -213,7 +219,7 @@ a:visited, a:active {
   transition: 0.4s;
 }
 
-.button:hover, active {
+.button:hover, active, focus {
 	color: #FFFDF9;
 	opacity: 0.8;
 	text-decoration: none;
@@ -223,6 +229,11 @@ a:visited, a:active {
 .button:visited {
    color: #FFFDF9;
    text-decoration: none;
+}
+
+.about-cv a {
+	margin: 20px 0px;
+	text-decoration: none;
 }
 
 /* --------------------------------------------------------------------------------------------------------------------------------------------------------------------
