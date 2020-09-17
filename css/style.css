@@ -5,10 +5,15 @@
 - Background & Vela Alt Text (Yellowish-White): #FFFDF9;
 - Text & Accents (Dark Gray): #262626;
 - Unselected & Alt Accent (Light Gray): #A0A0A0;
+
 - Vela Accent (Dark Blue): #24313D;
 - Vela Alt Header 1 (Grayish-Blue): #758598;
 - Vela Alt Header 2 (Dark Grayish-Blue): #586B7C;
 - Vela Alt Background (Light Gray): #EFEFEF;
+
+- FlashNotes Accent (Yellow): #F9EA3B;
+- FlashNotes Background (Grayish-Blue): #37475A;
+- FlashNotes Header 1 (Light Grayish-Blue): #758598;
 
 [FONTS]
 
@@ -170,10 +175,24 @@ img {
 	width: 100%;
 }
 
+.fullimage.flash {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	margin: 0;
+}
+
 .centerimage {
 	display: flex;
 	justify-content: center;
 	max-width: 100%;
+}
+
+.centerimage.flash-persona {
+	display: flex;
+	justify-content: center;
+	width: 80%;
+	margin: auto;
 }
 
 /* --------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -336,6 +355,10 @@ nav.vela {
 	background-color: #24313D;
 }
 
+nav.flash {
+	background-color: #37475A;
+}
+
 /* ----------------- [NAV LINKS STYLING] ------------------ */
 
 .nav-links {
@@ -368,21 +391,9 @@ nav.vela {
 	transition: 0.2s ease-in;
 }
 
-.nav-links.vela {
-	background-color: #24313D;
-}
-
-.nav-links.vela a {
-	color: #758598;
-}
-
 .nav-links a:hover, a:focus, a:active {
 	color: #262626;
 	transition: 0.2s ease-in;
-}
-
-.nav-links.vela a:hover, a:focus, a:active {
-	color: #89E3FF;
 }
 
 a.active {
@@ -391,6 +402,34 @@ a.active {
 
 ul.nav-links {
 	padding: 0;
+}
+
+/* ----------------- [NAV LINKS - VELA STYLING] ------------------ */
+
+.nav-links.vela {
+	background-color: #24313D;
+}
+
+.nav-links.vela a {
+	color: #758598;
+}
+
+.nav-links.vela a:hover, a:focus, a:active {
+	color: #89E3FF;
+}
+
+/* ----------------- [NAV LINKS - FLASHNOTES STYLING] ------------------ */
+
+.nav-links.flash {
+	background-color: #37475A;
+}
+
+.nav-links.flash a {
+	color: #758598;
+}
+
+.nav-links.flash a:hover, a:focus, a:active {
+	color: #F9EA3B;
 }
 
 /* ----------------- [HAMBURGER MENU STYLING] ------------------ */
@@ -411,6 +450,10 @@ ul.nav-links {
 
 .burger.vela div {
 	background-color: #89E3FF;
+}
+
+.burger.flash div {
+	background-color: #F9EA3B;
 }
 
 /* ----------------- [NAV LINKS HAMBURGER ANIMATIONS] ------------------ */
@@ -483,6 +526,10 @@ Social Media Icons:
 	height: 60px;
 	width: 100%;
 	margin: 100px 0px 50px 0px;
+}
+
+.bar.flash {
+	margin: 0;
 }
 
 .chat {
@@ -605,45 +652,48 @@ Social Media Icons:
 
 [PROJECT-OVERVIEW STYLING]
 
-- Media query to activate flexbox only when viewport width > 900px (56.25em), otherwise default to block display
+- Media query to activate flexbox only when viewport width > 768px, otherwise default to block display
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 
-@media only screen and (max-width: 768px) {
+.layout-overview {
+	display: block;
+	width: 70%;
+	margin: 80px auto;
+}
 
-	.layout-overview {
-		display: block;
-		width: 70%;
-		margin: 100px auto;
-	}
+.accent-overview {
+	background-color: #24313D;
+	height: auto;
+	color: #FFFDF9;
+	padding: 15px;
+}
 
-	.accent-overview {
-		background-color: #24313D;
-		height: auto;
-		color: #FFFDF9;
-		padding: 15px;
-	}
+.accent-overview-flash {
+	background-color: #37475A;
+	height: auto;
+	color: #FFFDF9;
+	padding: 15px;
+}
 
-	.role > h4 {
-		font-family: 'EB Garamond', serif;
-		font-weight: 700;
-		font-size: 22px;
-		line-height: 0;
-	}
+.role > h4 {
+	font-family: 'EB Garamond', serif;
+	font-weight: 700;
+	font-size: 22px;
+	line-height: 0;
+}
 
-	.date {
-		font-family: 'EB Garamond', serif;
-		font-weight: 400;
-		font-style: italic;
-		font-size: 18px;
-	}
+.date {
+	font-family: 'EB Garamond', serif;
+	font-weight: 400;
+	font-style: italic;
+	font-size: 18px;
+}
 
-	.process {
-		display: block;
-		width: 70%;
-		margin: 0px auto 120px auto;
-	}
-
+.process {
+	display: block;
+	width: 70%;
+	margin: 0px auto 120px auto;
 }
 
 @media only screen and (min-width: 768px) {
@@ -687,6 +737,15 @@ Social Media Icons:
 		height: auto;
 		color: #FFFDF9;
 		padding: 5px 0px;
+		margin: 80px 0px;
+	}
+
+	.accent-overview-flash {
+		background-color: #37475A;
+		height: auto;
+		color: #FFFDF9;
+		padding: 5px 0px;
+		margin: 80px 0px;
 	}
 
 }
@@ -770,7 +829,7 @@ Social Media Icons:
 .vela-bg-gray {
 	background-color: #EFEFEF;
 	height: auto;
-	padding: 20px 0px 60px 0px;
+	padding: 20px 0px 80px 0px;
 	margin: 80px 0px 80px 0px;
 }
 
