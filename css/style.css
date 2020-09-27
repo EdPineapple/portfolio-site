@@ -4,7 +4,7 @@
 
 - Background & Vela Alt Text (Yellowish-White): #FFFDF9;
 - Text & Accents (Dark Gray): #262626;
-- Unselected & Alt Accent (Light Gray): #A0A0A0;
+- Unselected & Alt Accent (Light Gray): #8C8C8C;
 
 - Vela Accent (Dark Blue): #24313D;
 - Vela Alt Header 1 (Grayish-Blue): #758598;
@@ -171,12 +171,14 @@ img {
 
 .fullimage {
 	display: flex;
+	align-items: flex-start;
 	justify-content: center;
 	width: 100%;
 }
 
 .fullimage.flash {
 	display: flex;
+	align-items: flex-start;
 	justify-content: center;
 	width: 100%;
 	margin: 0;
@@ -184,12 +186,14 @@ img {
 
 .centerimage {
 	display: flex;
+	align-items: flex-start;
 	justify-content: center;
 	max-width: 100%;
 }
 
 .centerimage.flash-persona {
 	display: flex;
+	align-items: flex-start;
 	justify-content: center;
 	width: 80%;
 	margin: auto;
@@ -384,7 +388,7 @@ nav.flash {
 }
 
 .nav-links a {
-	color: #A0A0A0;
+	color: #8C8C8C;
 	text-decoration: none;
 	text-transform: uppercase;
 	letter-spacing: 2px;
@@ -425,7 +429,7 @@ ul.nav-links {
 }
 
 .nav-links.flash a {
-	color: #758598;
+	color: #8D98AA;
 }
 
 .nav-links.flash a:hover, a:focus, a:active {
