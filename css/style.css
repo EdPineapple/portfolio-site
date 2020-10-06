@@ -47,6 +47,7 @@ body {
 	font-weight: 400;
 	line-height: 1.6;
 	color: #262626;
+	overflow-x: hidden;
 }
 
 h1, h2, h3, h4 {
@@ -268,7 +269,7 @@ a:visited, a:active {
 #hero {
 	display: block;
 	width: 80%;
-	margin: 250px auto;
+	margin: 80px auto;
 }
 
 #hero h1 {
@@ -291,7 +292,7 @@ a:visited, a:active {
 	#hero {
 	display: block;
 	width: 60%;
-	margin: 250px auto;
+	margin: 200px auto;
 	}
 
 	#hero h1 {
@@ -463,10 +464,6 @@ ul.nav-links {
 /* ----------------- [NAV LINKS HAMBURGER ANIMATIONS] ------------------ */
 
 @media screen and (max-width:768px){
-	
-	body {
-		overflow-x: hidden;
-	}
 
 	.nav-links {
 		position: absolute;
