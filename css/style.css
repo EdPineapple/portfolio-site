@@ -34,6 +34,7 @@
 
 html {
 	scroll-behavior: smooth;
+	overflow-x: hidden;
 }
 
 * {
@@ -48,6 +49,7 @@ body {
 	line-height: 1.6;
 	color: #262626;
 	overflow-x: hidden;
+	position: relative;
 }
 
 h1, h2, h3, h4 {
@@ -269,7 +271,7 @@ a:visited, a:active {
 #hero {
 	display: block;
 	width: 80%;
-	margin: 80px auto;
+	margin: 50px auto;
 }
 
 #hero h1 {
